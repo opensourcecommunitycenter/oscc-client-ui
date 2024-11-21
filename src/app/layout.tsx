@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Karla, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const karla = Karla({
     subsets: ["latin"],
@@ -27,7 +28,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${karla.variable} ${playfair_display.variable} antialiased`}
+                className={cn(
+                    "min-h-screen bg-background font-karla font-playfair-display antialiased",
+                    karla.variable,
+                    playfair_display.variable
+                )}
             >
                 {children}
             </body>
