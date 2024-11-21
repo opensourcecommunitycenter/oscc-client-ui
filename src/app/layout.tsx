@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Karla, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
+const karla = Karla({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-karla",
 });
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
+
+const playfair_display = Playfair_Display({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-playfair-display",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${karla.variable} ${playfair_display.variable} antialiased`}
             >
                 {children}
             </body>
