@@ -57,7 +57,7 @@ export default {
                 sm: "calc(var(--radius) - 4px)",
             },
             fontFamily: {
-                sans: ["var(--font-karla)"],
+                sans: ["var(--font-open-sans)"],
                 serif: ["var(--font-playfair-display)"],
             },
         },

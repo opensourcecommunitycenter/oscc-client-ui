@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Karla, Playfair_Display } from "next/font/google";
+import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/custom/header";
 
-const karla = Karla({
+const open_sans = Open_Sans({
     subsets: ["latin"],
     display: "swap",
-    variable: "--font-karla",
+    variable: "--font-open-sans",
 });
 
 const playfair_display = Playfair_Display({
@@ -26,15 +27,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
-                className={cn(
-                    "min-h-screen bg-background font-karla font-playfair-display antialiased",
-                    karla.variable,
-                    playfair_display.variable
-                )}
+                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased`}
             >
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Header />
+                    <main>{children}</main>
+                </ThemeProvider>
             </body>
         </html>
     );
