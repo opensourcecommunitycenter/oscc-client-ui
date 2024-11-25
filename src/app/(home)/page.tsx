@@ -45,7 +45,12 @@ export default function Home() {
 
                             {/* Buttons */}
                             <div className="w-full flex justify-center gap-5 px-6">
-                                <Button className="w-full">Join Us</Button>
+                                <Button
+                                    variant={"quaternary"}
+                                    className="w-full"
+                                >
+                                    Join Us
+                                </Button>
                                 <Button variant={"glass"} className="w-full">
                                     Learn More
                                 </Button>

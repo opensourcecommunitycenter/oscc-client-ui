@@ -47,6 +47,12 @@ h6 {
     background-color: rgba(65, 46, 0, 0.2);
     backdrop-filter: blur(3px);
     border: 0.1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.2s ease;
+
+    &:hover {
+        /* background-color: rgba(65, 46, 0, 0.2); */
+        backdrop-filter: blur(5px);
+    }
 }
 
 @layer base {
@@ -64,7 +70,7 @@ h6 {
         --secondary-foreground: 60 9.1% 97.8%;
         --tertiary: 38.51 91.78% 57.06%;
         --tertiary-foreground: 60 9.1% 97.8%;
-        --quaternary: 67.02 37.6% 49.02%;
+        --quaternary: 20.74 89.3% 52.35%;
         --quaternary-foreground: 60 9.1% 97.8%;
         --muted: 60 4.8% 95.9%;
         --muted-foreground: 25 5.3% 44.7%;
@@ -91,13 +97,13 @@ h6 {
         --card-foreground: 60 9.1% 97.8%;
         --popover: 20 14.3% 4.1%;
         --popover-foreground: 60 9.1% 97.8%;
-        --primary: 20.5 90.2% 48.2%;
+        --primary: 203.41 30.37% 26.47%;
         --primary-foreground: 60 9.1% 97.8%;
-        --secondary: 12 6.5% 15.1%;
+        --secondary: 205.52 46.03% 37.06%;
         --secondary-foreground: 60 9.1% 97.8%;
-        --tertiary: 203.41 30.37% 26.47%;
+        --tertiary: 38.51 91.78% 57.06%;
         --tertiary-foreground: 60 9.1% 97.8%;
-        --quaternary: 67.02 37.6% 49.02%;
+        --quaternary: 20.74 89.3% 52.35%;
         --quaternary-foreground: 60 9.1% 97.8%;
         --muted: 12 6.5% 15.1%;
         --muted-foreground: 24 5.4% 63.9%;
