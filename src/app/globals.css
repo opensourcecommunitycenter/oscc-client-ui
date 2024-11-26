@@ -18,7 +18,7 @@ h6 {
 }
 
 .custom-container {
-    max-width: 1280px; /*? or 1536px */
+    max-width: 1536px; /*? or 1280px */
     margin: 0 auto;
     padding-right: 3rem;
     padding-left: 3rem;
@@ -26,7 +26,7 @@ h6 {
 
 .hero-background {
     background-color: rgba(255, 246, 237, 0.7);
-    background-image: url("/images/hero-bg.svg");
+    background-image: url("/hero-bg.svg");
     background-blend-mode: overlay;
     background-repeat: repeat; /* Repeat horizontally */
     background-size: 30%; /* Keep original size */
@@ -43,14 +43,26 @@ h6 {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.image-radial-gradient {
+    background: radial-gradient(
+            35.6% 74.32% at 50.79% 50.01%,
+            rgba(255, 252, 244, 0) 0%,
+            #fffcf4 100%
+        ),
+        radial-gradient(
+            48.17% 48.35% at 45.62% 43.45%,
+            rgba(255, 252, 244, 0) 0%,
+            rgba(255, 252, 244, 0.85) 100%
+        );
+}
+
 .glass {
     background-color: rgba(65, 46, 0, 0.2);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     border: 0.1px solid rgba(255, 255, 255, 0.25);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 
     &:hover {
-        /* background-color: rgba(65, 46, 0, 0.2); */
         backdrop-filter: blur(5px);
     }
 }
@@ -60,7 +72,7 @@ h6 {
         --background: 43.64 100% 97.84%;
         --heading-foreground: 21.54 100% 7.65%;
         --foreground: 0 0% 24.31%;
-        --card: 0 0% 100%;
+        --card: 60 7% 97%;
         --card-foreground: 20 14.3% 4.1%;
         --popover: 0 0% 100%;
         --popover-foreground: 20 14.3% 4.1%;
@@ -134,6 +146,12 @@ h6 {
 /* custom tailwind classes */
 @layer utilities {
     .screen-max {
-        @apply max-w-full max-h-screen h-screen;
+        @apply max-w-full max-h-screen h-screen flex items-center justify-center;
+    }
+    .h2-p-combo {
+        @apply flex flex-col flex-wrap;
+    }
+    .universal-roundness {
+        @apply rounded-lg;
     }
 }
