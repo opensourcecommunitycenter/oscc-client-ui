@@ -1,3 +1,4 @@
+import SimpleCard from "@/components/custom/simple-card";
 import { Button } from "@/components/ui/button";
 import {
     TypographyH1,
@@ -29,14 +30,12 @@ export default function Home() {
                         <div className="absolute inset-0 hero-img-gradient"></div>
 
                         {/* Content (Text + Buttons) */}
-                        <div className="absolute w-[95%] mx-auto inset-0 flex flex-col items-center justify-center text-center  p-20 gap-12">
-                            <div className="w-full flex flex-col gap-4 flex-wrap text-primary-foreground">
-                                {/* box-shadow: 0px 4px 20px 0px rgba(255, 240, 228, 0.5); */}
-
+                        <div className="absolute w-[95%] mx-auto inset-0 flex flex-col items-center justify-center text-center p-20 gap-12">
+                            <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-7">
                                 <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
                                     Virtual Space for Real Life Choices
                                 </TypographyH1>
-                                <TypographyP className="text-2xl px-6">
+                                <TypographyP className="px-6">
                                     Empowering you to connect Islamic Worldview
                                     with the realities of modern life through
                                     practical and transformative experiences.
@@ -44,11 +43,8 @@ export default function Home() {
                             </div>
 
                             {/* Buttons */}
-                            <div className="w-full flex justify-center gap-5 px-6">
-                                <Button
-                                    variant={"quaternary"}
-                                    className="w-full"
-                                >
+                            <div className="w-full flex justify-center gap-5">
+                                <Button variant={"default"} className="w-full">
                                     Join Us
                                 </Button>
                                 <Button variant={"glass"} className="w-full">
@@ -59,26 +55,23 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
             {/* About Section */}
             <section className="screen-max">
-                <div className="container custom-container px-12 py-32 grid grid-cols-2">
-                    <div>
+                <div className="container custom-container px-12 py-32 grid grid-cols-[3fr_4fr] gap-10 place-items-center">
+                    <div className="w-[400px] h-[400px] relative overflow-hidden">
                         {/* About Image */}
                         <Image
                             src={"/images/man-holding-child.jpeg"}
-                            width={500}
-                            height={500}
+                            fill
+                            style={{ objectFit: "cover" }}
                             alt="About image"
+                            className="rounded-full"
                         />
+                        <div className="absolute inset-0 image-radial-gradient"></div>
                     </div>
-                    <div className="w-full flex flex-col gap-4 flex-wrap">
-                        {/* box-shadow: 0px 4px 20px 0px rgba(255, 240, 228, 0.5); */}
-
-                        <TypographyH2 className="">
-                            Addressing the Disconnect
-                        </TypographyH2>
-                        <TypographyP className="text-2xl px-6">
+                    <div className="h2-p-combo pr-4">
+                        <TypographyH2>Addressing the Disconnect</TypographyH2>
+                        <TypographyP>
                             In a world that separates worldly knowledge from
                             deeper, spiritual insights, many feel the lack of a
                             cohesive approach that truly aligns with their
@@ -87,6 +80,18 @@ export default function Home() {
                             challenges, creating a experiences that’s relevant,
                             rooted, and real.
                         </TypographyP>
+                    </div>
+                </div>
+            </section>
+            ;{/* Solution Section */}
+            <section className="screen-max">
+                <div className="container custom-container px-12 py-32">
+                    <div className="h2-p-combo flex items-center justify-center text-center">
+                        <TypographyH2>From Skills to Solutions</TypographyH2>
+                        <TypographyP>Making an Impact That Matters</TypographyP>
+                    </div>
+                    <div className="grid grid-cols-2">
+                        <SimpleCard />
                     </div>
                 </div>
             </section>

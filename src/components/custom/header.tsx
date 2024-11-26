@@ -5,7 +5,7 @@ import { ModeToggle } from "../ui/dark-mode-button";
 const Header = () => {
     return (
         <header>
-            <nav className="flex items-center justify-between container custom-container py-5">
+            <nav className="flex items-center justify-between container custom-container 2xl:py-8">
                 <div className="w-48">
                     <svg
                         fill="none"
@@ -66,7 +66,7 @@ const Header = () => {
                             <Link href={"/"}>FAQ</Link>
                         </li>
                         <li>
-                            <Button>
+                            <Button variant={"secondary"}>
                                 <Link href={"/"}>Login to My Account</Link>
                             </Button>
                         </li>
