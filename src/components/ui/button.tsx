@@ -26,10 +26,10 @@ const buttonVariants = cva(
                 glass: "text-primary-foreground glass",
             },
             size: {
-                default: "h-16 px-4 py-6",
+                default: "2xl:h-16 px-4 py-6",
                 sm: "h-9 universal-roundness px-3",
                 lg: "h-11 universal-roundness px-8",
-                icon: "h-10 w-10",
+                icon: "h-10 w-10 2xl:h-16 2xl:w-16",
             },
         },
         defaultVariants: {

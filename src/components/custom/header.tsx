@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <nav className="flex items-center justify-between container custom-container 2xl:py-8">
-                <div className="w-48">
+                <div className="w-56">
                     <svg
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
