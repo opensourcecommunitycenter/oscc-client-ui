@@ -44,10 +44,16 @@ export default function Home() {
 
                             {/* Buttons */}
                             <div className="w-full flex justify-center gap-5">
-                                <Button variant={"default"} className="w-full">
+                                <Button
+                                    variant={"quaternary"}
+                                    className="w-full xl:h-14 2xl:h-16"
+                                >
                                     Join Us
                                 </Button>
-                                <Button variant={"glass"} className="w-full">
+                                <Button
+                                    variant={"glass"}
+                                    className="w-full xl:h-14 2xl:h-16"
+                                >
                                     Learn More
                                 </Button>
                             </div>

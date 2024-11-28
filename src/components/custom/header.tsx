@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { ModeToggle } from "../ui/dark-mode-button";
+// import { ModeToggle } from "../ui/dark-mode-button";
 
 const Header = () => {
     return (
         <header>
-            <nav className="flex items-center justify-between container custom-container 2xl:py-8">
+            <nav className="flex items-center justify-between container custom-container xl:py-6 2xl:py-8">
                 <div className="w-56">
                     <svg
                         fill="none"
@@ -70,9 +70,9 @@ const Header = () => {
                                 <Link href={"/"}>Login to My Account</Link>
                             </Button>
                         </li>
-                        <li>
+                        {/* <li>
                             <ModeToggle />
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </nav>

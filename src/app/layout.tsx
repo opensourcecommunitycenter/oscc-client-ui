@@ -29,7 +29,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased 2xl:text-xl font-medium`}
+                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased 2xl:text-xl`}
             >
                 <ThemeProvider
                     attribute="class"
