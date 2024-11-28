@@ -30,8 +30,8 @@ export default function Home() {
                         <div className="absolute inset-0 hero-img-gradient"></div>
 
                         {/* Content (Text + Buttons) */}
-                        <div className="absolute w-full mx-auto inset-0 flex flex-col items-center justify-center text-center p-20 gap-12">
-                            <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-7">
+                        <div className="absolute w-full mx-auto inset-0 flex flex-col items-center justify-center text-center p-16 xl:p-20 gap-12">
+                            <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-5 xl:gap-7">
                                 <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
                                     Virtual Space for Real Life Choices
                                 </TypographyH1>
@@ -46,13 +46,13 @@ export default function Home() {
                             <div className="w-full flex justify-center gap-5">
                                 <Button
                                     variant={"quaternary"}
-                                    className="w-full xl:h-14 2xl:h-16"
+                                    className="w-full h-12 xl:h-14 2xl:h-16"
                                 >
                                     Join Us
                                 </Button>
                                 <Button
                                     variant={"glass"}
-                                    className="w-full xl:h-14 2xl:h-16"
+                                    className="w-full h-12 xl:h-14 2xl:h-16"
                                 >
                                     Learn More
                                 </Button>

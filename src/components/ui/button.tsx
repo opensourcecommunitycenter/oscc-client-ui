@@ -26,7 +26,7 @@ const buttonVariants = cva(
                 glass: "text-primary-foreground glass",
             },
             size: {
-                default: "xl:h-12 2xl:h-14 px-4 py-6",
+                default: "h-10 xl:h-12 2xl:h-14 px-4",
                 sm: "h-9 universal-roundness px-3",
                 lg: "h-11 universal-roundness px-8",
                 icon: "h-10 w-10 2xl:h-14 2xl:w-14",
