@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { TypographyH3, TypographyP } from "../ui/typography";
 
-const stackedCardVariants = {
+const flatCardVariants = {
     variants: {
         variant: {
             default: "bg-primary text-primary-foreground",
@@ -13,32 +13,32 @@ const stackedCardVariants = {
     },
 };
 
-interface StackedCard {
+interface FlatCard {
     children: ReactNode;
     className?: string;
     title: string;
     variant: string;
 }
 
-const StackedCard: React.FC<StackedCard> = ({
+const FlatCard: React.FC<FlatCard> = ({
     children,
     className = "",
     title,
     variant,
-}: StackedCard) => {
+}: FlatCard) => {
     let themeValue = "";
     if (variant === "secondary") {
-        themeValue = stackedCardVariants.variants.variant.secondary;
+        themeValue = flatCardVariants.variants.variant.secondary;
     } else if (variant === "tertiary") {
-        themeValue = stackedCardVariants.variants.variant.tertiary;
+        themeValue = flatCardVariants.variants.variant.tertiary;
     } else if (variant === "quaternary") {
-        themeValue = stackedCardVariants.variants.variant.quaternary;
+        themeValue = flatCardVariants.variants.variant.quaternary;
     } else if (variant === "glass") {
-        themeValue = stackedCardVariants.variants.variant.glass;
+        themeValue = flatCardVariants.variants.variant.glass;
     } else if (variant === "default") {
-        themeValue = stackedCardVariants.variants.variant.default;
+        themeValue = flatCardVariants.variants.variant.default;
     } else {
-        themeValue = stackedCardVariants.variants.variant.default;
+        themeValue = flatCardVariants.variants.variant.default;
     }
 
     return (
@@ -67,4 +67,4 @@ const StackedCard: React.FC<StackedCard> = ({
     );
 };
 
-export default StackedCard;
+export default FlatCard;

@@ -66,7 +66,7 @@ const Header = () => {
                             <Link href={"/"}>FAQ</Link>
                         </li>
                         <li>
-                            <Button variant={"secondary"}>
+                            <Button variant={"default"}>
                                 <Link href={"/"}>Login to My Account</Link>
                             </Button>
                         </li>

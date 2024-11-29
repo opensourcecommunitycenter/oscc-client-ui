@@ -1,4 +1,6 @@
+import FlatCard from "@/components/custom/flat-card";
 import SimpleCard from "@/components/custom/simple-card";
+import StackedCard from "@/components/custom/stacked-card";
 import { Button } from "@/components/ui/button";
 import {
     TypographyH1,
@@ -45,7 +47,7 @@ export default function Home() {
                             {/* Buttons */}
                             <div className="w-full flex justify-center gap-5">
                                 <Button
-                                    variant={"quaternary"}
+                                    variant={"secondary"}
                                     className="w-full h-12 xl:h-14 2xl:h-16"
                                 >
                                     Join Us
@@ -77,10 +79,8 @@ export default function Home() {
                         />
                         <div className="absolute inset-0 image-radial-gradient"></div>
                     </div>
-                    <div className="hp-combo pr-4">
-                        <TypographyH2 className="mb-6">
-                            Addressing the Disconnect
-                        </TypographyH2>
+                    <div className="hp-combo-h2 pr-4">
+                        <TypographyH2>Addressing the Disconnect</TypographyH2>
                         <TypographyP>
                             In a world that separates worldly knowledge from
                             deeper, spiritual insights, many feel the lack of a
@@ -98,7 +98,7 @@ export default function Home() {
             {/* ========== Start Solution Section ========== */}
             <section className="wh-max">
                 <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-10">
-                    <div className="hp-combo flex items-center justify-center text-center">
+                    <div className="hp-combo-h2 flex items-center justify-center text-center">
                         <TypographyH2>From Skills to Solutions</TypographyH2>
                         <TypographyP>Making an Impact That Matters</TypographyP>
                     </div>
@@ -148,9 +148,9 @@ export default function Home() {
             {/* ========== End Solution Section ========== */}
 
             {/* ========== Start Explore Section ========== */}
-            <section className="wh-max">
-                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-10">
-                    <div className="hp-combo flex items-center justify-center text-center">
+            <section className="wh-max bg-backgroundAlt">
+                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
+                    <div className="hp-combo-h2 flex items-center justify-center text-center">
                         <TypographyH2>Explore Our Workshops</TypographyH2>
                         <TypographyP>
                             Each of our programs is designed to bring practical,
@@ -158,50 +158,59 @@ export default function Home() {
                             for your all-rounded development.
                         </TypographyP>
                     </div>
-                    <div className="grid grid-cols-2 place-items-center py-10 gap-7">
-                        <SimpleCard
-                            title={"Opportunity"}
-                            imageSrc={"/images/lighthouse.png"}
+                    <div className="grid grid-cols-2 place-items-center py-10 gap-20">
+                        <StackedCard
+                            variant={"quaternary"}
+                            title={"Seerah Workshop"}
                         >
-                            Gain access to workshops and training programs that
-                            blend Islamic wisdom with practical life skills.
-                            Each session is designed to provide you with new
-                            perspectives and actionable steps toward personal
-                            and professional success.
-                        </SimpleCard>
-                        <SimpleCard
-                            title={"Social Network"}
-                            imageSrc={"/images/sail-boat.png"}
+                            Draws lessons from the life of Prophet Muhammad (ﷺ)
+                            and his companions to provide moral and spiritual
+                            guidance.
+                        </StackedCard>
+                        <StackedCard
+                            variant={"secondary"}
+                            title={"Arabic Literature Workshop"}
                         >
-                            Become part of a like-minded community where
-                            learning doesn’t end in isolation. Discuss ideas,
-                            share insights, and collaborate with peers and
-                            mentors who are on a similar journey of growth.
-                        </SimpleCard>
-                        <SimpleCard
-                            title={"Achievement"}
-                            imageSrc={"/images/fishes.png"}
+                            Covers essential skills like grammar, tajweed, and
+                            tafsir to deepen your understanding of Islamic
+                            texts.
+                        </StackedCard>
+                        <StackedCard
+                            variant={"default"}
+                            title={"Critical Thinking Workshop"}
                         >
-                            Set and accomplish meaningful goals, from completing
-                            specialized workshops to mastering core skills.
-                            Track your progress, earn recognition, and see how
-                            each milestone brings you closer to a fulfilling
-                            path.
-                        </SimpleCard>
-                        <SimpleCard
-                            title={"Personal Growth"}
-                            imageSrc={"/images/plant.png"}
+                            Strengthens decision-making with a focus on Qur’anic
+                            wisdom for thoughtful, clear analysis.
+                        </StackedCard>
+                        <StackedCard
+                            variant={"tertiary"}
+                            title={"Emotional Intelligence Workshop"}
                         >
-                            OSCC is more than a learning platform—it’s a space
-                            for introspection, character building, and
-                            developing resilience. Each course and community
-                            interaction is designed to foster growth that aligns
-                            with your values and aspirations.
-                        </SimpleCard>
+                            Training empathy, self-awareness, and emotional
+                            resilience grounded in Qur’an & Seerah.
+                        </StackedCard>
+                    </div>
+                    <div
+                        className="bg-white border border-[#2F485859] 
+                   px-8 py-6 text-3xl rounded-2xl"
+                    >
+                        More Programmes are currently under Development
                     </div>
                 </div>
             </section>
             {/* ========== End Explore Section ========== */}
+
+            {/* ========== Start How OSCC Works Section ========== */}
+            <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
+                <div className="hp-combo-h2 flex items-center justify-center text-center">
+                    <TypographyH2>How OSCC Works</TypographyH2>
+                    <TypographyP>Your Path with OSCC</TypographyP>
+                </div>
+                <div>
+                    <FlatCard title={""} variant={"default"}></FlatCard>
+                </div>
+            </div>
+            {/* ========== End How OSCC Works Section ========== */}
         </>
     );
 }

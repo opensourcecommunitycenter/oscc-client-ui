@@ -18,7 +18,7 @@ export function TypographyH1({ children, className = "" }: Typography) {
 export function TypographyH2({ children, className = "" }: Typography) {
     return (
         <h2
-            className={`scroll-m-20 mb-4 text-6xl text-headingForeground font-medium tracking-tight first:mt-0 ${className}`}
+            className={`scroll-m-20 mb-4 text-6xl text-headingForeground font-semibold tracking-tight first:mt-0 ${className}`}
         >
             {children}
         </h2>
@@ -28,7 +28,7 @@ export function TypographyH2({ children, className = "" }: Typography) {
 export function TypographyH3({ children, className = "" }: Typography) {
     return (
         <h3
-            className={`scroll-m-20 text-4xl font-semibold tracking-tight ${className}`}
+            className={`scroll-m-20 text-5xl font-semibold tracking-tight ${className}`}
         >
             {children}
         </h3>
