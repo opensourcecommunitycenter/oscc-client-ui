@@ -67,6 +67,29 @@ h6 {
     }
 }
 
+/* @screen md {
+    html {
+        font-size: 65%;
+    }
+} */
+@screen lg {
+    html {
+        font-size: 70%;
+    }
+}
+
+@screen xl {
+    html {
+        font-size: 85%;
+    }
+}
+
+@screen 2xl {
+    html {
+        font-size: 100%;
+    }
+}
+
 @layer base {
     :root {
         --background: 43.64 100% 97.84%;
@@ -146,9 +169,12 @@ h6 {
 /* custom tailwind classes */
 @layer utilities {
     .screen-max {
-        @apply max-w-full max-h-screen h-screen flex items-center justify-center;
+        @apply max-w-full max-h-screen h-screen grid place-items-center;
     }
-    .h2-p-combo {
+    .wh-max {
+        @apply max-w-full max-h-full h-full grid place-items-center;
+    }
+    .hp-combo {
         @apply flex flex-col flex-wrap;
     }
     .universal-roundness {

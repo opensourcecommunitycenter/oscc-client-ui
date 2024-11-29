@@ -14,11 +14,11 @@ export default function Home() {
 
     return (
         <>
-            {/* Hero Section */}
+            {/* ========== Start Hero Section ========== */}
             <section className="screen-max">
                 <div className="relative w-full h-full hero-background p-12 overflow-hidden bg-[#FFF6ED40]">
                     {/* Sub Div */}
-                    <div className="relative container custom-container w-full h-full flex flex-col items-center justify-center rounded-xl overflow-hidden">
+                    <div className="relative container custom-container w-full h-[85%] flex flex-col items-center justify-center rounded-xl overflow-hidden">
                         {/* Sub Div Background Image */}
                         <Image
                             src={"/images/hero3.jpg"}
@@ -30,7 +30,7 @@ export default function Home() {
                         <div className="absolute inset-0 hero-img-gradient"></div>
 
                         {/* Content (Text + Buttons) */}
-                        <div className="absolute w-full mx-auto inset-0 flex flex-col items-center justify-center text-center p-16 xl:p-20 gap-12">
+                        <div className="absolute w-full mx-auto inset-0 flex flex-col items-center justify-center text-center p-20 gap-12">
                             <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-5 xl:gap-7">
                                 <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
                                     Virtual Space for Real Life Choices
@@ -61,10 +61,12 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            {/* About Section */}
-            <section className="screen-max">
+            {/* ========== End Hero Section ========== */}
+
+            {/* ========== Start About Section ========== */}
+            <section className="wh-max">
                 <div className="container custom-container px-12 py-32 grid grid-cols-[3fr_4fr] gap-10 place-items-center">
-                    <div className="w-[400px] h-[400px] relative overflow-hidden">
+                    <div className="w-[350px] h-[350px] xl:w-[500px] xl:h-[500px] relative overflow-hidden">
                         {/* About Image */}
                         <Image
                             src={"/images/man-holding-child.jpeg"}
@@ -75,8 +77,10 @@ export default function Home() {
                         />
                         <div className="absolute inset-0 image-radial-gradient"></div>
                     </div>
-                    <div className="h2-p-combo pr-4">
-                        <TypographyH2>Addressing the Disconnect</TypographyH2>
+                    <div className="hp-combo pr-4">
+                        <TypographyH2 className="mb-6">
+                            Addressing the Disconnect
+                        </TypographyH2>
                         <TypographyP>
                             In a world that separates worldly knowledge from
                             deeper, spiritual insights, many feel the lack of a
@@ -89,18 +93,115 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            ;{/* Solution Section */}
-            <section className="screen-max">
-                <div className="container custom-container px-12 py-32">
-                    <div className="h2-p-combo flex items-center justify-center text-center">
+            {/* ========== End About Section ========== */}
+
+            {/* ========== Start Solution Section ========== */}
+            <section className="wh-max">
+                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-10">
+                    <div className="hp-combo flex items-center justify-center text-center">
                         <TypographyH2>From Skills to Solutions</TypographyH2>
                         <TypographyP>Making an Impact That Matters</TypographyP>
                     </div>
-                    <div className="grid grid-cols-2">
-                        <SimpleCard />
+                    <div className="grid grid-cols-2 place-items-center py-10 gap-7">
+                        <SimpleCard
+                            title={"Opportunity"}
+                            imageSrc={"/images/lighthouse.png"}
+                        >
+                            Gain access to workshops and training programs that
+                            blend Islamic wisdom with practical life skills.
+                            Each session is designed to provide you with new
+                            perspectives and actionable steps toward personal
+                            and professional success.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Social Network"}
+                            imageSrc={"/images/sail-boat.png"}
+                        >
+                            Become part of a like-minded community where
+                            learning doesn’t end in isolation. Discuss ideas,
+                            share insights, and collaborate with peers and
+                            mentors who are on a similar journey of growth.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Achievement"}
+                            imageSrc={"/images/fishes.png"}
+                        >
+                            Set and accomplish meaningful goals, from completing
+                            specialized workshops to mastering core skills.
+                            Track your progress, earn recognition, and see how
+                            each milestone brings you closer to a fulfilling
+                            path.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Personal Growth"}
+                            imageSrc={"/images/plant.png"}
+                        >
+                            OSCC is more than a learning platform—it’s a space
+                            for introspection, character building, and
+                            developing resilience. Each course and community
+                            interaction is designed to foster growth that aligns
+                            with your values and aspirations.
+                        </SimpleCard>
                     </div>
                 </div>
             </section>
+            {/* ========== End Solution Section ========== */}
+
+            {/* ========== Start Explore Section ========== */}
+            <section className="wh-max">
+                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-10">
+                    <div className="hp-combo flex items-center justify-center text-center">
+                        <TypographyH2>Explore Our Workshops</TypographyH2>
+                        <TypographyP>
+                            Each of our programs is designed to bring practical,
+                            grounded lessons inspired by the Islamic Worldview
+                            for your all-rounded development.
+                        </TypographyP>
+                    </div>
+                    <div className="grid grid-cols-2 place-items-center py-10 gap-7">
+                        <SimpleCard
+                            title={"Opportunity"}
+                            imageSrc={"/images/lighthouse.png"}
+                        >
+                            Gain access to workshops and training programs that
+                            blend Islamic wisdom with practical life skills.
+                            Each session is designed to provide you with new
+                            perspectives and actionable steps toward personal
+                            and professional success.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Social Network"}
+                            imageSrc={"/images/sail-boat.png"}
+                        >
+                            Become part of a like-minded community where
+                            learning doesn’t end in isolation. Discuss ideas,
+                            share insights, and collaborate with peers and
+                            mentors who are on a similar journey of growth.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Achievement"}
+                            imageSrc={"/images/fishes.png"}
+                        >
+                            Set and accomplish meaningful goals, from completing
+                            specialized workshops to mastering core skills.
+                            Track your progress, earn recognition, and see how
+                            each milestone brings you closer to a fulfilling
+                            path.
+                        </SimpleCard>
+                        <SimpleCard
+                            title={"Personal Growth"}
+                            imageSrc={"/images/plant.png"}
+                        >
+                            OSCC is more than a learning platform—it’s a space
+                            for introspection, character building, and
+                            developing resilience. Each course and community
+                            interaction is designed to foster growth that aligns
+                            with your values and aspirations.
+                        </SimpleCard>
+                    </div>
+                </div>
+            </section>
+            {/* ========== End Explore Section ========== */}
         </>
     );
 }
