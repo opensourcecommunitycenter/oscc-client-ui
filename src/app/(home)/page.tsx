@@ -206,8 +206,39 @@ export default function Home() {
                     <TypographyH2>How OSCC Works</TypographyH2>
                     <TypographyP>Your Path with OSCC</TypographyP>
                 </div>
-                <div>
-                    <FlatCard title={""} variant={"default"}></FlatCard>
+                <div className="grid grid-cols-1 gap-10">
+                    <FlatCard
+                        title={"Choose Your Level"}
+                        number={"1"}
+                        variant={"tertiary"}
+                    >
+                        Start as an observer or dive in as an active
+                        participant, based on your comfort level.
+                    </FlatCard>
+                    <FlatCard
+                        title={"Attend Live Workshops via Zoom"}
+                        number={"2"}
+                        variant={"secondary"}
+                    >
+                        Join expert-led sessions that address real-life
+                        applications and actionable insights.
+                    </FlatCard>
+                    <FlatCard
+                        title={"Access Recordings & Discussions"}
+                        number={"3"}
+                        variant={"quaternary"}
+                    >
+                        Review past sessions and continue the conversation with
+                        peers.
+                    </FlatCard>
+                    <FlatCard
+                        title={"Track Your Achievements"}
+                        number={"4"}
+                        variant={"default"}
+                    >
+                        See your progress and celebrate milestones that matter
+                        to your overall growth.
+                    </FlatCard>
                 </div>
             </div>
             {/* ========== End How OSCC Works Section ========== */}

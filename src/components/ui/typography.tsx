@@ -35,6 +35,16 @@ export function TypographyH3({ children, className = "" }: Typography) {
     );
 }
 
+export function TypographyH4({ children, className = "" }: Typography) {
+    return (
+        <h4
+            className={`scroll-m-20 text-4xl font-medium tracking-tight ${className}`}
+        >
+            {children}
+        </h4>
+    );
+}
+
 export function TypographyP({ children, className = "" }: Typography) {
     return (
         <p className={`text-3xl font-normal leading-10 ${className}`}>
