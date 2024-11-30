@@ -1,3 +1,4 @@
+import FAQCard from "@/components/custom/faq-card";
 import FlatCard from "@/components/custom/flat-card";
 import SimpleCard from "@/components/custom/simple-card";
 import StackedCard from "@/components/custom/stacked-card";
@@ -201,47 +202,105 @@ export default function Home() {
             {/* ========== End Explore Section ========== */}
 
             {/* ========== Start How OSCC Works Section ========== */}
-            <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
-                <div className="hp-combo-h2 flex items-center justify-center text-center">
-                    <TypographyH2>How OSCC Works</TypographyH2>
-                    <TypographyP>Your Path with OSCC</TypographyP>
+            <section className="wh-max">
+                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
+                    <div className="hp-combo-h2 flex items-center justify-center text-center">
+                        <TypographyH2>How OSCC Works</TypographyH2>
+                        <TypographyP>Your Path with OSCC</TypographyP>
+                    </div>
+                    <div className="grid grid-cols-1 gap-10">
+                        <FlatCard
+                            title={"Choose Your Level"}
+                            number={"1"}
+                            variant={"tertiary"}
+                        >
+                            Start as an observer or dive in as an active
+                            participant, based on your comfort level.
+                        </FlatCard>
+                        <FlatCard
+                            title={"Attend Live Workshops via Zoom"}
+                            number={"2"}
+                            variant={"secondary"}
+                        >
+                            Join expert-led sessions that address real-life
+                            applications and actionable insights.
+                        </FlatCard>
+                        <FlatCard
+                            title={"Access Recordings & Discussions"}
+                            number={"3"}
+                            variant={"quaternary"}
+                        >
+                            Review past sessions and continue the conversation
+                            with peers.
+                        </FlatCard>
+                        <FlatCard
+                            title={"Track Your Achievements"}
+                            number={"4"}
+                            variant={"default"}
+                        >
+                            See your progress and celebrate milestones that
+                            matter to your overall growth.
+                        </FlatCard>
+                    </div>
                 </div>
-                <div className="grid grid-cols-1 gap-10">
-                    <FlatCard
-                        title={"Choose Your Level"}
-                        number={"1"}
-                        variant={"tertiary"}
-                    >
-                        Start as an observer or dive in as an active
-                        participant, based on your comfort level.
-                    </FlatCard>
-                    <FlatCard
-                        title={"Attend Live Workshops via Zoom"}
-                        number={"2"}
-                        variant={"secondary"}
-                    >
-                        Join expert-led sessions that address real-life
-                        applications and actionable insights.
-                    </FlatCard>
-                    <FlatCard
-                        title={"Access Recordings & Discussions"}
-                        number={"3"}
-                        variant={"quaternary"}
-                    >
-                        Review past sessions and continue the conversation with
-                        peers.
-                    </FlatCard>
-                    <FlatCard
-                        title={"Track Your Achievements"}
-                        number={"4"}
-                        variant={"default"}
-                    >
-                        See your progress and celebrate milestones that matter
-                        to your overall growth.
-                    </FlatCard>
-                </div>
-            </div>
+            </section>
             {/* ========== End How OSCC Works Section ========== */}
+
+            {/* ========== Start FAQ Section ========== */}
+            <section className="relative wh-max">
+                <Image
+                    src={"/images/faq-section.jpg"}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    alt="faq image"
+                    className="opacity-40 -z-10"
+                />
+                <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
+                    <div className="hp-combo-h2 flex items-center justify-center text-center">
+                        <TypographyH2 className="text-[#813208]">
+                            Frequently Asked Questions
+                        </TypographyH2>
+                    </div>
+                    <div className="grid grid-cols-1 gap-10 bg-[#EEEEEE4D] p-20 overflow-hidden universal-roundness">
+                        <FAQCard title={"How does spectator membership work?"}>
+                            As a spectator, you can observe workshops, view
+                            limited recorded content, and get a feel for our
+                            community without actively participating in live
+                            sessions or discussions.
+                        </FAQCard>
+                        <FAQCard
+                            title={
+                                "How are workshops conducted? Do I need special software?"
+                            }
+                        >
+                            Our live workshops are hosted on Zoom, so you’ll
+                            need a Zoom account. Links to join are shared
+                            directly on the platform for easy access.
+                        </FAQCard>
+                        <FAQCard
+                            title={
+                                "Are live sessions recorded? Can I watch them later?"
+                            }
+                        >
+                            Yes, all live sessions are recorded and available
+                            for replay. Active members can access recordings
+                            anytime to revisit key points or catch up if they
+                            missed the live session.
+                        </FAQCard>
+                        <FAQCard
+                            title={
+                                "What’s the difference between spectator access and active membership?"
+                            }
+                        >
+                            Spectator access lets you browse content and observe
+                            sessions, while active membership allows full
+                            participation in workshops, discussions, and
+                            community interactions.
+                        </FAQCard>
+                    </div>
+                </div>
+            </section>
+            {/* ========== End FAQ Section ========== */}
         </>
     );
 }

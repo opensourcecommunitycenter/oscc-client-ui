@@ -108,6 +108,8 @@ h6 {
         --tertiary-foreground: 60 9.1% 97.8%;
         --quaternary: 38.51 91.78% 57.06%;
         --quaternary-foreground: 60 9.1% 97.8%;
+        --question: 21 83% 35%;
+        --question-foreground: 0 0% 98%;
         --muted: 60 4.8% 95.9%;
         --muted-foreground: 25 5.3% 44.7%;
         --accent: 60 4.8% 95.9%;

@@ -3,6 +3,7 @@ import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/custom/header";
+import Footer from "@/components/custom/footer";
 
 const open_sans = Open_Sans({
     subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
                 >
                     <Header />
                     <main>{children}</main>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

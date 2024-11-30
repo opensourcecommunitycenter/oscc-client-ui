@@ -55,7 +55,7 @@ const FlatCard: React.FC<FlatCard> = ({
             className={`flex items-center justify-start gap-10 w-full h-full p-16 rounded-xl z-20 bg-[#EEEEEE4D] border border-[#C4C4C4BF] ${className}`}
         >
             <div
-                className={`${themeValue} w-20 h-20 flex items-start justify-center text-6xl font-serif rounded-lg font-light`}
+                className={`${themeValue} w-20 h-20 flex items-start justify-center text-6xl font-serif rounded-xl font-light`}
             >
                 {number}
             </div>
