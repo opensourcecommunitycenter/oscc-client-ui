@@ -11,10 +11,6 @@ import {
 import Image from "next/image";
 
 export default function Home() {
-    // Unsplash dynamic image URL for the background. Replace 'nature' with desired keywords for specificity.
-    // const unsplashImage =
-    //     "https://images.unsplash.com/photo-1725384283230-184d60ac31dd?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-
     return (
         <>
             {/* ========== Start Hero Section ========== */}
@@ -257,7 +253,7 @@ export default function Home() {
                 />
                 <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
                     <div className="hp-combo-h2 flex items-center justify-center text-center">
-                        <TypographyH2 className="text-[#813208]">
+                        <TypographyH2 className="text-question-heading">
                             Frequently Asked Questions
                         </TypographyH2>
                     </div>

@@ -52,6 +52,7 @@ export default {
                 },
                 question: {
                     DEFAULT: "hsl(var(--question))",
+                    heading: "hsl(var(--question-heading))",
                     foreground: "hsl(var(--question-foreground))",
                 },
                 border: "hsl(var(--border))",

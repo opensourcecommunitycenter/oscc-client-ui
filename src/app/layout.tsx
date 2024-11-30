@@ -30,7 +30,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased xl:text-base`}
+                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased text-lg`}
             >
                 <ThemeProvider
                     attribute="class"
