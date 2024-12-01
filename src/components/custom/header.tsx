@@ -7,14 +7,16 @@ const Header = () => {
     return (
         <header>
             <nav className="flex items-center justify-between container custom-container py-6 2xl:py-8">
-                <div className="w-48">
-                    <Image
-                        src={"/oscc.svg"}
-                        width={500}
-                        height={500}
-                        alt="oscc logo"
-                    />
-                </div>
+                <Link href={"/"}>
+                    <div className="w-48">
+                        <Image
+                            src={"/oscc.svg"}
+                            width={500}
+                            height={500}
+                            alt="oscc logo"
+                        />
+                    </div>
+                </Link>
                 <div>
                     <ul className="flex items-center gap-x-5 font-medium">
                         <li>
@@ -30,9 +32,11 @@ const Header = () => {
                             <Link href={"/"}>FAQ</Link>
                         </li>
                         <li>
-                            <Button variant={"default"}>
-                                <Link href={"/"}>Login to My Account</Link>
-                            </Button>
+                            <Link href={"/auth/login"} className="w-full">
+                                <Button variant={"default"} size={"header"}>
+                                    Login to My Account
+                                </Button>
+                            </Link>
                         </li>
                         {/* <li>
                             <ModeToggle />

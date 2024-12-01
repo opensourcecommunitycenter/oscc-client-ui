@@ -9,6 +9,7 @@ import {
     TypographyP,
 } from "@/components/ui/typography";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -43,16 +44,15 @@ export default function Home() {
 
                             {/* Buttons */}
                             <div className="w-full flex justify-center gap-5">
-                                <Button
-                                    variant={"secondary"}
-                                    className="w-full h-12 xl:h-14 2xl:h-16"
+                                <Link
+                                    href={"/auth/register"}
+                                    className="w-full"
                                 >
-                                    Join Us
-                                </Button>
-                                <Button
-                                    variant={"glass"}
-                                    className="w-full h-12 xl:h-14 2xl:h-16"
-                                >
+                                    <Button variant={"secondary"} size={"hero"}>
+                                        Join Us
+                                    </Button>
+                                </Link>
+                                <Button variant={"glass"} size={"hero"}>
                                     Learn More
                                 </Button>
                             </div>
@@ -64,8 +64,8 @@ export default function Home() {
 
             {/* ========== Start About Section ========== */}
             <section className="wh-max">
-                <div className="container custom-container px-12 py-32 grid grid-cols-[3fr_4fr] gap-10 place-items-center">
-                    <div className="w-[350px] h-[350px] xl:w-[500px] xl:h-[500px] relative overflow-hidden">
+                <div className="container custom-container px-12 py-32 grid grid-cols-[2fr,8fr] gap-8 place-items-center">
+                    <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] relative overflow-hidden">
                         {/* About Image */}
                         <Image
                             src={"/images/man-holding-child.jpeg"}
@@ -76,7 +76,7 @@ export default function Home() {
                         />
                         <div className="absolute inset-0 image-radial-gradient"></div>
                     </div>
-                    <div className="hp-combo-h2 pr-4">
+                    <div className="hp-combo-h2">
                         <TypographyH2>Addressing the Disconnect</TypographyH2>
                         <TypographyP>
                             In a world that separates worldly knowledge from
@@ -224,7 +224,7 @@ export default function Home() {
                         <FlatCard
                             title={"Access Recordings & Discussions"}
                             number={"3"}
-                            variant={"quaternary"}
+                            variant={"green"}
                         >
                             Review past sessions and continue the conversation
                             with peers.

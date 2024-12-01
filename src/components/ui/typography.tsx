@@ -27,9 +27,7 @@ export function TypographyH2({ children, className = "" }: Typography) {
 
 export function TypographyH3({ children, className = "" }: Typography) {
     return (
-        <h3
-            className={`scroll-m-20 text-5xl font-semibold tracking-tight ${className}`}
-        >
+        <h3 className={`scroll-m-20 text-5xl tracking-tight ${className}`}>
             {children}
         </h3>
     );

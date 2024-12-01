@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+// import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
 
@@ -30,18 +30,18 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased text-lg`}
+                className={`${open_sans.variable} ${playfair_display.variable} min-h-screen bg-background antialiased text-xl`}
             >
-                <ThemeProvider
+                {/* <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
                     disableTransitionOnChange
-                >
-                    <Header />
-                    <main>{children}</main>
-                    <Footer />
-                </ThemeProvider>
+                > */}
+                <Header />
+                <main>{children}</main>
+                <Footer />
+                {/* </ThemeProvider> */}
             </body>
         </html>
     );

@@ -10,8 +10,8 @@ const flatCardVariants = {
             secondaryHeading: "text-secondary",
             tertiary: "bg-tertiary text-tertiary-foreground",
             tertiaryHeading: "text-tertiary",
-            quaternary: "bg-quaternary text-quaternary-foreground",
-            quaternaryHeading: "text-quaternary",
+            green: "bg-green text-green-foreground",
+            greenHeading: "text-green",
         },
     },
 };
@@ -39,9 +39,9 @@ const FlatCard: React.FC<FlatCard> = ({
     } else if (variant === "tertiary") {
         themeValue = flatCardVariants.variants.variant.tertiary;
         headingTheme = flatCardVariants.variants.variant.tertiaryHeading;
-    } else if (variant === "quaternary") {
-        themeValue = flatCardVariants.variants.variant.quaternary;
-        headingTheme = flatCardVariants.variants.variant.quaternaryHeading;
+    } else if (variant === "green") {
+        themeValue = flatCardVariants.variants.variant.green;
+        headingTheme = flatCardVariants.variants.variant.greenHeading;
     } else if (variant === "default") {
         themeValue = flatCardVariants.variants.variant.default;
         headingTheme = flatCardVariants.variants.variant.defaultHeading;
@@ -52,14 +52,14 @@ const FlatCard: React.FC<FlatCard> = ({
 
     return (
         <div
-            className={`flex items-center justify-start gap-10 w-full h-full p-16 rounded-xl z-20 bg-[#EEEEEE4D] border border-[#C4C4C4BF] ${className}`}
+            className={`grid grid-cols-[1fr,9fr] gap-2 sm:gap-0  w-full h-full p-16 rounded-xl z-20 bg-[#EEEEEE4D] border border-[#C4C4C4BF] ${className}`}
         >
             <div
                 className={`${themeValue} w-20 h-20 flex items-start justify-center text-6xl font-serif rounded-xl font-light`}
             >
                 {number}
             </div>
-            <div className="hp-combo flex items-start justify-center gap-4 text-left p-2">
+            <div className="hp-combo flex items-start justify-center gap-4 text-left py-2">
                 <TypographyH4 className={`font-medium ${headingTheme}`}>
                     {title}
                 </TypographyH4>

@@ -9,6 +9,10 @@ export default {
     ],
     theme: {
         extend: {
+            height: {
+                "18": "70px",
+                "19": "75px",
+            },
             colors: {
                 background: "hsl(var(--background))",
                 backgroundAlt: "hsl(var(--background-alt))",
@@ -54,6 +58,10 @@ export default {
                     DEFAULT: "hsl(var(--question))",
                     heading: "hsl(var(--question-heading))",
                     foreground: "hsl(var(--question-foreground))",
+                },
+                green: {
+                    DEFAULT: "hsl(var(--green))",
+                    foreground: "hsl(var(--green-foreground))",
                 },
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",

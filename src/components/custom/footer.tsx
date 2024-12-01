@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="grid place-items-center px-36 py-40 gap-10">
+        <footer className="grid place-items-center px-36 py-40 gap-10 border-t border-[#bfbdb7]">
             <div className="w-72">
                 <Image
                     src={"/oscc.svg"}
