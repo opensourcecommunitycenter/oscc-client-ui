@@ -23,7 +23,7 @@ export default function Home() {
                         <Image
                             src={"/images/hero3.jpg"}
                             fill={true}
-                            style={{ objectFit: "cover" }}
+                            objectFit="cover"
                             alt="Hero image"
                         />
                         {/* Hero Image Gradient */}
@@ -70,7 +70,7 @@ export default function Home() {
                         <Image
                             src={"/images/man-holding-child.jpeg"}
                             fill
-                            style={{ objectFit: "cover" }}
+                            objectFit="cover"
                             alt="About image"
                             className="rounded-full"
                         />
@@ -247,7 +247,7 @@ export default function Home() {
                 <Image
                     src={"/images/faq-section.jpg"}
                     fill
-                    style={{ objectFit: "cover" }}
+                    objectFit="cover"
                     alt="faq image"
                     className="opacity-40 -z-10"
                 />

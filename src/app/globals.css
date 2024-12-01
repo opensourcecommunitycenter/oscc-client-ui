@@ -200,4 +200,7 @@ h6 {
     .universal-roundness {
         @apply rounded-lg;
     }
+    .sticking {
+        @apply shadow-md bg-backgroundAlt;
+    }
 }

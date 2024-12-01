@@ -1,11 +1,28 @@
+"use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { useEffect } from "react";
 // import { ModeToggle } from "../ui/dark-mode-button";
 
 const Header = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            const header = document.querySelector(".header");
+            if (header) {
+                header.classList.toggle("sticking", window.scrollY > 50);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <header>
+        <header className="header sticky top-0 z-50 bg-background transition-all duration-300 ease-in-out">
             <nav className="flex items-center justify-between container custom-container py-6 2xl:py-8">
                 <Link href={"/"}>
                     <div className="w-48">
