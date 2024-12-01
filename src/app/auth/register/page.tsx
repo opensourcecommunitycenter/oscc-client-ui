@@ -98,13 +98,15 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-1 gap-5">
-                            <Button
-                                variant={"green"}
-                                type="submit"
-                                className="w-full"
-                            >
-                                Signup for a new account
-                            </Button>
+                            <Link href={"/onboarding/start"}>
+                                <Button
+                                    variant={"green"}
+                                    type="submit"
+                                    className="w-full"
+                                >
+                                    Signup for a new account
+                                </Button>
+                            </Link>
                             <Link href={"/auth/login"} className="w-full">
                                 <Button variant="outline" className="w-full">
                                     Login using an existing account

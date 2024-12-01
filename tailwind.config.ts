@@ -59,6 +59,11 @@ export default {
                     heading: "hsl(var(--question-heading))",
                     foreground: "hsl(var(--question-foreground))",
                 },
+                alt: {
+                    DEFAULT: "hsl(var(--alt))",
+                    foreground: "hsl(var(--alt-foreground))",
+                    border: "hsl(var(--alt-border))",
+                },
                 green: {
                     DEFAULT: "hsl(var(--green))",
                     foreground: "hsl(var(--green-foreground))",

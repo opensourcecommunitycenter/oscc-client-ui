@@ -88,7 +88,7 @@ h6 {
 
 @screen xl {
     html {
-        font-size: 85%;
+        font-size: 80%;
     }
 }
 
@@ -118,6 +118,9 @@ h6 {
         --quaternary-foreground: 60 9.1% 97.8%;
         --green: 171.27 53.4% 20.2%;
         --green-foreground: 60 9.1% 97.8%;
+        --alt: 45 17% 95%;
+        --alt-foreground: 0 0% 24%;
+        --alt-border: 40 3% 77%;
         --question: 21 83% 35%;
         --question-heading: 20.83 88.32% 26.86%;
         --question-foreground: 0 0% 98%;

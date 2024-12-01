@@ -46,15 +46,6 @@ const Login = () => {
                     <CardContent className="w-full grid grid-cols-1 gap-10">
                         <div className="grid gap-5">
                             <div className="grid gap-2">
-                                <Label htmlFor="full-name">Full Name</Label>
-                                <Input
-                                    id="full-name"
-                                    type="text"
-                                    placeholder="Ahmed Iqbal"
-                                    required
-                                />
-                            </div>
-                            <div className="grid gap-2">
                                 <Label htmlFor="email">Email Address</Label>
                                 <Input
                                     id="email"
@@ -64,17 +55,14 @@ const Login = () => {
                                 />
                             </div>
                             <div className="grid gap-2">
-                                <Label htmlFor="username">Username</Label>
-                                <Input
-                                    id="username"
-                                    type="text"
-                                    placeholder="ahmediqbal"
-                                    required
-                                />
-                            </div>
-                            <div className="grid gap-2">
                                 <div className="flex items-center">
                                     <Label htmlFor="password">Password</Label>
+                                    <Link
+                                        href="#"
+                                        className="ml-auto inline-block underline"
+                                    >
+                                        Forgot your password?
+                                    </Link>
                                 </div>
                                 <Input
                                     id="password"
@@ -83,31 +71,22 @@ const Login = () => {
                                     required
                                 />
                             </div>
-                            <div className="grid gap-2">
-                                <div className="flex items-center">
-                                    <Label htmlFor="confirm-password">
-                                        Confirm Password
-                                    </Label>
-                                </div>
-                                <Input
-                                    id="confirm-password"
-                                    type="password"
-                                    placeholder="•••••••"
-                                    required
-                                />
-                            </div>
                         </div>
                         <div className="grid grid-cols-1 gap-5">
-                            <Button
-                                variant={"green"}
-                                type="submit"
-                                className="w-full"
-                            >
-                                Signup for a new account
-                            </Button>
-                            <Button variant="outline" className="w-full">
-                                Login using an existing account
-                            </Button>
+                            <Link href={"/onboarding/start"}>
+                                <Button
+                                    variant={"green"}
+                                    type="submit"
+                                    className="w-full"
+                                >
+                                    Login with Email
+                                </Button>
+                            </Link>
+                            <Link href={"/auth/register"}>
+                                <Button variant="alt" className="w-full">
+                                    Register for a new account
+                                </Button>
+                            </Link>
                         </div>
                     </CardContent>
                 </Card>
