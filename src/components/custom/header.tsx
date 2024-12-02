@@ -10,7 +10,7 @@ const Header = () => {
         const handleScroll = () => {
             const header = document.querySelector(".header");
             if (header) {
-                header.classList.toggle("sticking", window.scrollY > 50);
+                header.classList.toggle("sticking-nav", window.scrollY > 50);
             }
         };
 
@@ -25,7 +25,7 @@ const Header = () => {
         <header className="header sticky top-0 z-50 bg-background transition-all duration-300 ease-in-out">
             <nav className="flex items-center justify-between container custom-container py-6 2xl:py-8">
                 <Link href={"/"}>
-                    <div className="w-48">
+                    <div className="w-60">
                         <Image
                             src={"/oscc.svg"}
                             width={500}

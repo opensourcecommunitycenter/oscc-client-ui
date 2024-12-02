@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -7,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Register = () => {
     const { toast } = useToast();

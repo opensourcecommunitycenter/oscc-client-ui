@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 // import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
@@ -40,6 +41,7 @@ export default function RootLayout({
                 > */}
                 <Header />
                 <main>{children}</main>
+                <Toaster />
                 <Footer />
                 {/* </ThemeProvider> */}
             </body>
