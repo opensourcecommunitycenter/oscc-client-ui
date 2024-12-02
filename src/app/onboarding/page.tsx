@@ -8,8 +8,8 @@ const Onboarding = () => {
     return (
         <section className="wh-max">
             <div className="container custom-container grid grid-cols-1 place-items-center gap-12 px-8 py-10">
-                <div className="w-[70%] mx-auto grid grid-cols-1 place-items-center gap-24 px-6 py-8 ">
-                    <div className="w-72">
+                <div className="w-[90%] mx-auto grid grid-cols-1 place-items-center gap-24 px-6 py-8 ">
+                    <div className="w-96">
                         <Image
                             src={"/bismillah.svg"}
                             width={500}
@@ -17,12 +17,12 @@ const Onboarding = () => {
                             alt="oscc logo"
                         />
                     </div>
-                    <div className="hp-combo gap-2 text-center w-full overflow-hidden">
-                        <TypographyH3 className="text-[#33658A] tracking-wider">
+                    <div className="hp-combo gap-4 text-center w-full overflow-hidden">
+                        <TypographyH3 className="text-[#33658A] tracking-wide">
                             Let’s get you started on your journey of life-long
                             learning and growth.
                         </TypographyH3>
-                        <TypographyP className="font-normal tracking-normal text-2xl">
+                        <TypographyP className="w-[90%] mx-auto font-normal tracking-normal text-2xl">
                             To tailor the platform to your needs, we’ll gather
                             some information in a few quick steps.
                         </TypographyP>

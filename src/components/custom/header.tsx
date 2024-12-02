@@ -9,9 +9,13 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector(".header");
+            // const navbar = document.querySelector(".navbar");
             if (header) {
-                header.classList.toggle("sticking-nav", window.scrollY > 50);
+                header.classList.toggle("sticky-header", window.scrollY > 50);
             }
+            // if (navbar) {
+            //     navbar.classList.toggle("sticky-nav", window.scrollY > 50);
+            // }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -23,9 +27,9 @@ const Header = () => {
     }, []);
     return (
         <header className="header sticky top-0 z-50 bg-background transition-all duration-300 ease-in-out">
-            <nav className="flex items-center justify-between container custom-container py-6 2xl:py-8">
+            <nav className="navbar flex items-center justify-between container custom-container py-7 transition-all duration-300 ease-in-out">
                 <Link href={"/"}>
-                    <div className="w-60">
+                    <div className="w-56">
                         <Image
                             src={"/oscc.svg"}
                             width={500}
@@ -35,7 +39,7 @@ const Header = () => {
                     </div>
                 </Link>
                 <div>
-                    <ul className="flex items-center gap-x-5 font-medium">
+                    <ul className="flex items-center gap-x-7 font-medium">
                         <li>
                             <Link href={"/"}>Philosophy</Link>
                         </li>

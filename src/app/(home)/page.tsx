@@ -30,31 +30,39 @@ export default function Home() {
                         <div className="absolute inset-0 hero-img-gradient"></div>
 
                         {/* Content (Text + Buttons) */}
-                        <div className="absolute w-full mx-auto inset-0 flex flex-col items-center justify-center text-center p-20 gap-12">
-                            <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-5 xl:gap-7">
-                                <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
-                                    Virtual Space for Real Life Choices
-                                </TypographyH1>
-                                <TypographyP className="px-6">
-                                    Empowering you to connect Islamic Worldview
-                                    with the realities of modern life through
-                                    practical and transformative experiences.
-                                </TypographyP>
-                            </div>
+                        <div className="grid place-items-center absolute w-full mx-auto inset-0 p-20 gap-12">
+                            <div className="xl:w-full 2xl:w-[91%] grid grid-cols-1 place-items-center gap-10 text-center">
+                                <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-5 xl:gap-7 p-6">
+                                    <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
+                                        Virtual Space for Real Life Choices
+                                    </TypographyH1>
+                                    <TypographyP>
+                                        Empowering you to connect Islamic
+                                        Worldview with the realities of modern
+                                        life through practical and
+                                        transformative experiences.
+                                    </TypographyP>
+                                </div>
 
-                            {/* Buttons */}
-                            <div className="w-full flex justify-center gap-5">
-                                <Link
-                                    href={"/auth/register"}
-                                    className="w-full"
-                                >
-                                    <Button variant={"secondary"} size={"hero"}>
-                                        Join Us
-                                    </Button>
-                                </Link>
-                                <Button variant={"glass"} size={"hero"}>
-                                    Learn More
-                                </Button>
+                                {/* Buttons */}
+                                <div className="w-full flex justify-center gap-5 px-6">
+                                    <Link
+                                        href={"/auth/register"}
+                                        className="w-full"
+                                    >
+                                        <Button
+                                            variant={"secondary"}
+                                            size={"hero"}
+                                        >
+                                            Join Us
+                                        </Button>
+                                    </Link>
+                                    <Link href={""} className="w-full">
+                                        <Button variant={"glass"} size={"hero"}>
+                                            Learn More
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -63,20 +71,20 @@ export default function Home() {
             {/* ========== End Hero Section ========== */}
 
             {/* ========== Start About Section ========== */}
-            <section className="wh-max">
-                <div className="container custom-container px-12 py-32 grid grid-cols-[2fr,8fr] gap-8 place-items-center">
-                    <div className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] relative overflow-hidden">
+            <section className="wh-max-p">
+                <div className="container custom-container px-12 py-32 grid grid-cols-[6fr,7fr] gap-8 place-items-center">
+                    <div className="relative justify-self-end w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] overflow-hidden">
                         {/* About Image */}
                         <Image
                             src={"/images/man-holding-child.jpeg"}
                             fill
                             objectFit="cover"
                             alt="About image"
-                            className="rounded-full"
+                            className="left-0 rounded-full"
                         />
                         <div className="absolute inset-0 image-radial-gradient"></div>
                     </div>
-                    <div className="hp-combo-h2">
+                    <div className="hp-combo-h2 justify-self-start">
                         <TypographyH2>Addressing the Disconnect</TypographyH2>
                         <TypographyP>
                             In a world that separates worldly knowledge from

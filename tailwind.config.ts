@@ -10,6 +10,7 @@ export default {
     theme: {
         extend: {
             height: {
+                "13": "52px",
                 "18": "70px",
                 "19": "75px",
             },

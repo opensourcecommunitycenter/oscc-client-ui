@@ -28,12 +28,12 @@ const buttonVariants = cva(
                 glass: "text-primary-foreground glass",
             },
             size: {
-                default: "h-19 xl:h-19 2xl:h-19 px-4",
+                default: "h-18 xl:h-18 2xl:h-18 px-4",
                 sm: "h-19 universal-roundness px-3",
                 lg: "h-19 universal-roundness px-8",
                 icon: "h-19 w-16 2xl:h-14 2xl:w-14",
-                header: "h-10 lg:h-12 xl:h-14 2xl:h-16 px-4",
-                hero: "w-full h-12 xl:h-14 2xl:h-16",
+                header: "h-10 lg:h-12 xl:h-12 2xl:h-14 px-4 xl:px-4 2xl:px-5",
+                hero: "w-full h-14 xl:h-16 2xl:h-18",
             },
         },
         defaultVariants: {

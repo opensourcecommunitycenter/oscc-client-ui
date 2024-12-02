@@ -9,13 +9,6 @@ body {
     font-weight: 500;
 }
 
-a,
-ul,
-li,
-button {
-    font-weight: 600;
-}
-
 h1,
 h2,
 h3,
@@ -189,7 +182,10 @@ h6 {
         @apply max-w-full max-h-screen h-screen grid place-items-center;
     }
     .wh-max {
-        @apply max-w-full max-h-full h-full grid place-items-center p-10;
+        @apply max-w-full max-h-full h-full grid place-items-center px-10 py-10;
+    }
+    .wh-max-p {
+        @apply max-w-full max-h-full h-full grid place-items-center px-10 py-16;
     }
     .hp-combo {
         @apply flex flex-col flex-wrap;
@@ -200,7 +196,10 @@ h6 {
     .universal-roundness {
         @apply rounded-lg;
     }
-    .sticking-nav {
+    .sticky-header {
         @apply shadow-md bg-backgroundAlt;
+    }
+    .sticky-nav {
+        @apply py-5;
     }
 }
