@@ -34,9 +34,14 @@ const Onboarding = () => {
                             Logout
                         </Button>
                     </Link>
-                    <Button variant={"tertiary"} size={"hero"}>
-                        Start Onboarding
-                    </Button>
+                    <Link
+                        href={"/onboarding/personal-profile"}
+                        className="w-full"
+                    >
+                        <Button variant={"tertiary"} size={"hero"}>
+                            Start Onboarding
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>

@@ -1,19 +1,23 @@
 import type { Config } from "tailwindcss";
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 export default {
     darkMode: ["class"],
-    content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
+    content: {
+        files: [
+            "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+            "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+            "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        ],
+        extract,
+    },
     theme: {
+        screens: {
+            ...screens,
+            ultra: "160rem",
+        }, // Tailwind's default screens, in `rem`
+        fontSize, // Tailwind's default font sizes, in `rem` (including line heights)
         extend: {
-            height: {
-                "13": "52px",
-                "18": "70px",
-                "19": "75px",
-            },
             colors: {
                 background: "hsl(var(--background))",
                 backgroundAlt: "hsl(var(--background-alt))",
@@ -91,5 +95,5 @@ export default {
             },
         },
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [fluid],
 } satisfies Config;

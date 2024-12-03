@@ -8,7 +8,7 @@ interface Typography {
 export function TypographyH1({ children, className = "" }: Typography) {
     return (
         <h1
-            className={`scroll-m-20 font-extrabold text-7xl tracking-wide ${className}`}
+            className={`scroll-m-20 font-extrabold text-base ~sm/2xl:~text-4xl/7xl ~2xl/ultra:~text-7xl/8xl tracking-wide ${className}`}
         >
             {children}
         </h1>
@@ -28,7 +28,7 @@ export function TypographyH2({ children, className = "" }: Typography) {
 export function TypographyH3({ children, className = "" }: Typography) {
     return (
         <h3
-            className={`scroll-m-20 text-4xl tracking-tight font-semibold leading-normal ${className}`}
+            className={`scroll-m-20 text-5xl tracking-tight font-semibold leading-normal ${className}`}
         >
             {children}
         </h3>
@@ -47,7 +47,9 @@ export function TypographyH4({ children, className = "" }: Typography) {
 
 export function TypographyP({ children, className = "" }: Typography) {
     return (
-        <p className={`text-3xl font-normal leading-10 ${className}`}>
+        <p
+            className={`~sm/2xl:~text-xl/3xl font-normal leading-10 ${className}`}
+        >
             {children}
         </p>
     );

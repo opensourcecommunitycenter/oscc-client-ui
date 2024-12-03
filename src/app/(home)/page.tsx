@@ -18,12 +18,12 @@ export default function Home() {
             <section className="screen-max">
                 <div className="relative w-full h-full hero-background p-12 overflow-hidden bg-[#FFF6ED40]">
                     {/* Sub Div */}
-                    <div className="relative container custom-container w-full h-[85%] flex flex-col items-center justify-center rounded-xl overflow-hidden">
+                    <div className="relative container custom-container w-full h-[90%] flex flex-col items-center justify-center rounded-xl overflow-hidden ">
                         {/* Sub Div Background Image */}
                         <Image
                             src={"/images/hero3.jpg"}
                             fill={true}
-                            objectFit="cover"
+                            objectFit="fixed"
                             alt="Hero image"
                         />
                         {/* Hero Image Gradient */}
@@ -31,7 +31,7 @@ export default function Home() {
 
                         {/* Content (Text + Buttons) */}
                         <div className="grid place-items-center absolute w-full mx-auto inset-0 p-20 gap-12">
-                            <div className="xl:w-full 2xl:w-[91%] grid grid-cols-1 place-items-center gap-10 text-center">
+                            <div className="w-full grid grid-cols-1 place-items-center gap-10 text-center">
                                 <div className="w-full flex flex-col flex-wrap text-primary-foreground gap-5 xl:gap-7 p-6">
                                     <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
                                         Virtual Space for Real Life Choices
