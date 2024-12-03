@@ -216,7 +216,7 @@ export default function Home() {
                         <FlatCard
                             title={"Choose Your Level"}
                             number={"1"}
-                            variant={"tertiary"}
+                            variant={"default"}
                         >
                             Start as an observer or dive in as an active
                             participant, based on your comfort level.
@@ -232,7 +232,7 @@ export default function Home() {
                         <FlatCard
                             title={"Access Recordings & Discussions"}
                             number={"3"}
-                            variant={"green"}
+                            variant={"tertiary"}
                         >
                             Review past sessions and continue the conversation
                             with peers.
@@ -240,7 +240,7 @@ export default function Home() {
                         <FlatCard
                             title={"Track Your Achievements"}
                             number={"4"}
-                            variant={"default"}
+                            variant={"quaternary"}
                         >
                             See your progress and celebrate milestones that
                             matter to your overall growth.

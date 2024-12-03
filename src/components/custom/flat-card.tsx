@@ -10,8 +10,8 @@ const flatCardVariants = {
             secondaryHeading: "text-secondary",
             tertiary: "bg-tertiary text-tertiary-foreground",
             tertiaryHeading: "text-tertiary",
-            green: "bg-green text-green-foreground",
-            greenHeading: "text-green",
+            quaternary: "bg-quaternary text-quaternary-foreground",
+            quaternaryHeading: "text-quaternary",
         },
     },
 };
@@ -39,9 +39,9 @@ const FlatCard: React.FC<FlatCard> = ({
     } else if (variant === "tertiary") {
         themeValue = flatCardVariants.variants.variant.tertiary;
         headingTheme = flatCardVariants.variants.variant.tertiaryHeading;
-    } else if (variant === "green") {
-        themeValue = flatCardVariants.variants.variant.green;
-        headingTheme = flatCardVariants.variants.variant.greenHeading;
+    } else if (variant === "quaternary") {
+        themeValue = flatCardVariants.variants.variant.quaternary;
+        headingTheme = flatCardVariants.variants.variant.quaternaryHeading;
     } else if (variant === "default") {
         themeValue = flatCardVariants.variants.variant.default;
         headingTheme = flatCardVariants.variants.variant.defaultHeading;

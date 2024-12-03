@@ -1,19 +1,58 @@
+"use client";
+import React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+const formSchema = z.object({
+    email: z
+        .string()
+        .email("Invalid email format")
+        .max(50, { message: "Email cannot exceed 50 characters." }),
+    password: z
+        .string()
+        .min(8, { message: "Password must be at least 8 characters" })
+        .max(50, { message: "Password cannot exceed 50 characters" }),
+});
 
 const Login = () => {
+    const { toast } = useToast();
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+
+    const onSubmit = (values: z.infer<typeof formSchema>) => {
+        toast({ description: "Signup successful!" });
+        console.log("Form Data:", values);
+        // Submit form values to your backend API
+    };
+
     return (
         <section className="wh-max">
             <div className="container custom-container grid grid-cols-1 place-items-center">
+                {/* Header Section */}
                 <div className="hp-combo flex items-center justify-center gap-4 text-center p-12">
                     <TypographyP className="font-semibold tracking-normal">
-                        Welcome back!
+                        Welcome Back!
                     </TypographyP>
                     <TypographyH4
                         className={"font-normal text-green tracking-wide"}
@@ -21,6 +60,8 @@ const Login = () => {
                         Login to your account
                     </TypographyH4>
                 </div>
+
+                {/* Form Section */}
                 <div className="px-8 py-7">
                     <Card className="grid grid-cols-1 place-items-center gap-5 bg-[#FFFFFFA6] max-w-full w-[700px] px-0 py-3">
                         <CardHeader className="w-full h-full">
@@ -44,53 +85,73 @@ const Login = () => {
                                 OR
                             </span>
                         </div>
+                        {/* User Form */}
                         <CardContent className="w-full grid grid-cols-1 gap-10">
-                            <div className="grid gap-5">
-                                <div className="grid gap-2">
-                                    <Label htmlFor="email">Email Address</Label>
-                                    <Input
-                                        id="email"
-                                        type="email"
-                                        placeholder="ahmed@email.com"
-                                        required
+                            <Form {...form}>
+                                <form
+                                    onSubmit={form.handleSubmit(onSubmit)}
+                                    className="space-y-6"
+                                >
+                                    {/* Email */}
+                                    <FormField
+                                        control={form.control}
+                                        name="email"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>
+                                                    Email Address
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input
+                                                        placeholder="ahmadiqbal@email.com"
+                                                        {...field}
+                                                    />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
                                     />
-                                </div>
-                                <div className="grid gap-2">
-                                    <div className="flex items-center">
-                                        <Label htmlFor="password">
-                                            Password
-                                        </Label>
-                                        <Link
-                                            href="#"
-                                            className="ml-auto inline-block underline"
+                                    {/* Password */}
+                                    <FormField
+                                        control={form.control}
+                                        name="password"
+                                        render={({ field }) => (
+                                            <FormItem>
+                                                <FormLabel>Password</FormLabel>
+                                                <FormControl>
+                                                    <Input
+                                                        placeholder="•••••••"
+                                                        {...field}
+                                                    />
+                                                </FormControl>
+                                                <FormMessage />
+                                            </FormItem>
+                                        )}
+                                    />
+                                    {/* Submit & Login Buttons */}
+                                    <div className="grid grid-cols-1 gap-5">
+                                        <Button
+                                            type="submit"
+                                            variant={"tertiary"}
+                                            className="w-full"
                                         >
-                                            Forgot your password?
+                                            Login with Email
+                                        </Button>
+                                        <Link
+                                            href={"/auth/login"}
+                                            className="w-full"
+                                        >
+                                            <Button
+                                                variant="outline"
+                                                className="w-full"
+                                            >
+                                                Don&apos;t have an account? Sign
+                                                up
+                                            </Button>
                                         </Link>
                                     </div>
-                                    <Input
-                                        id="password"
-                                        type="password"
-                                        placeholder="•••••••"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 gap-5">
-                                <Link href={"/onboarding"}>
-                                    <Button
-                                        variant={"green"}
-                                        type="submit"
-                                        className="w-full"
-                                    >
-                                        Login with Email
-                                    </Button>
-                                </Link>
-                                <Link href={"/auth/register"}>
-                                    <Button variant="alt" className="w-full">
-                                        Register for a new account
-                                    </Button>
-                                </Link>
-                            </div>
+                                </form>
+                            </Form>
                         </CardContent>
                     </Card>
                 </div>

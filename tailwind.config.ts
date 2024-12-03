@@ -69,10 +69,6 @@ export default {
                     foreground: "hsl(var(--alt-foreground))",
                     border: "hsl(var(--alt-border))",
                 },
-                green: {
-                    DEFAULT: "hsl(var(--green))",
-                    foreground: "hsl(var(--green-foreground))",
-                },
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

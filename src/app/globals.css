@@ -82,12 +82,10 @@ h6 {
         --primary-foreground: 60 9.1% 97.8%;
         --secondary: 20.74 89.3% 52.35%;
         --secondary-foreground: 60 9.1% 97.8%;
-        --tertiary: 203.41 30.37% 26.47%;
+        --tertiary: 171.27 53.4% 20.2%; /* 203.41 30.37% 26.47%;*/
         --tertiary-foreground: 60 9.1% 97.8%;
         --quaternary: 38.51 91.78% 57.06%;
         --quaternary-foreground: 60 9.1% 97.8%;
-        --green: 171.27 53.4% 20.2%;
-        --green-foreground: 60 9.1% 97.8%;
         --alt: 45 17% 95%;
         --alt-foreground: 0 0% 24%;
         --alt-border: 40 3% 77%;
