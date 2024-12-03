@@ -138,7 +138,7 @@ const Login = () => {
                                             Login with Email
                                         </Button>
                                         <Link
-                                            href={"/auth/login"}
+                                            href={"/auth/register"}
                                             className="w-full"
                                         >
                                             <Button

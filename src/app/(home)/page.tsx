@@ -18,14 +18,14 @@ export default function Home() {
             <section className="screen-max">
                 <div className="relative w-full h-full hero-background p-12 overflow-hidden bg-[#FFF6ED40]">
                     {/* Sub Div */}
-                    <div className="relative container custom-container w-full h-[90%] flex flex-col items-center justify-center rounded-xl overflow-hidden ">
+                    <div className="relative container custom-container w-full h-[90%] sub-hero-background flex flex-col items-center justify-center rounded-xl overflow-hidden ">
                         {/* Sub Div Background Image */}
-                        <Image
+                        {/* <Image
                             src={"/images/hero3.jpg"}
                             fill={true}
                             objectFit="fixed"
                             alt="Hero image"
-                        />
+                        /> */}
                         {/* Hero Image Gradient */}
                         <div className="absolute inset-0 hero-img-gradient"></div>
 
