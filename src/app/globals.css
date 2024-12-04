@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
     background-color: rgb(255 252 244);
     font-weight: 500;
 }
@@ -36,20 +40,26 @@ h6 {
 }
 
 .sub-hero-background {
-    background-image: url("/images/hero3.webp");
+    background-image: linear-gradient(
+            180deg,
+            rgba(157, 157, 157, 0.1) 0%,
+            rgba(43, 35, 28, 0.2) 100%
+        ),
+        url("/images/hero3.webp");
+    background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: overlay;
     background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.hero-img-gradient {
-    background: linear-gradient(
-        180deg,
-        rgba(157, 157, 157, 0.1) 0%,
-        rgba(89, 63, 41, 0.2) 100%
-    );
-    background-color: rgba(0, 0, 0, 0.4);
+.faq-section-background {
+    background-image: url("/images/faq-section.webp");
+    background-color: rgba(255, 252, 244, 0.5);
+    background-blend-mode: overlay;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .image-radial-gradient {
@@ -66,8 +76,8 @@ h6 {
 }
 
 .glass {
-    background-color: rgba(65, 46, 0, 0.2);
-    backdrop-filter: blur(2px);
+    background-color: rgba(65, 46, 0, 0.15);
+    backdrop-filter: blur(3px);
     border: 0.1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.3s ease;
 

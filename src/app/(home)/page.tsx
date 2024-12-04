@@ -19,15 +19,7 @@ export default function Home() {
                 <div className="relative w-full h-full hero-background p-12 overflow-hidden bg-[#FFF6ED40]">
                     {/* Sub Div */}
                     <div className="relative container custom-container w-full h-[90%] sub-hero-background flex flex-col items-center justify-center rounded-xl overflow-hidden ">
-                        {/* Sub Div Background Image */}
-                        {/* <Image
-                            src={"/images/hero3.jpg"}
-                            fill={true}
-                            objectFit="fixed"
-                            alt="Hero image"
-                        /> */}
                         {/* Hero Image Gradient */}
-                        <div className="absolute inset-0 hero-img-gradient"></div>
 
                         {/* Content (Text + Buttons) */}
                         <div className="grid place-items-center absolute w-full mx-auto inset-0 p-20 gap-12">
@@ -251,14 +243,7 @@ export default function Home() {
             {/* ========== End How OSCC Works Section ========== */}
 
             {/* ========== Start FAQ Section ========== */}
-            <section className="relative wh-max">
-                <Image
-                    src={"/images/faq-section.jpg"}
-                    fill
-                    objectFit="cover"
-                    alt="faq image"
-                    className="opacity-40 -z-10"
-                />
+            <section className="relative wh-max faq-section-background">
                 <div className="container custom-container flex flex-col items-center justify-center px-12 py-32 gap-16">
                     <div className="hp-combo-h2 flex items-center justify-center text-center">
                         <TypographyH2 className="text-question-heading">
