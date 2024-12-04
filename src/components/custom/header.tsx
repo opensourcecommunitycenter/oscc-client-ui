@@ -9,13 +9,13 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector(".header");
-            // const navbar = document.querySelector(".navbar");
+            const navbar = document.querySelector(".navbar");
             if (header) {
                 header.classList.toggle("sticky-header", window.scrollY > 50);
             }
-            // if (navbar) {
-            //     navbar.classList.toggle("sticky-nav", window.scrollY > 50);
-            // }
+            if (navbar) {
+                navbar.classList.toggle("sticky-nav", window.scrollY > 50);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);

@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 import {
     Form,
     FormControl,
@@ -12,35 +10,27 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { loginFormSchema } from "@/validations/authValidationSchema";
+import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
-import Image from "next/image";
-import Link from "next/link";
-
-const formSchema = z.object({
-    email: z
-        .string()
-        .email("Invalid email format")
-        .max(50, { message: "Email cannot exceed 50 characters." }),
-    password: z
-        .string()
-        .min(8, { message: "Password must be at least 8 characters" })
-        .max(50, { message: "Password cannot exceed 50 characters" }),
-});
 
 const Login = () => {
     const { toast } = useToast();
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const form = useForm<z.infer<typeof loginFormSchema>>({
+        resolver: zodResolver(loginFormSchema),
         defaultValues: {
             email: "",
             password: "",
         },
     });
 
-    const onSubmit = (values: z.infer<typeof formSchema>) => {
+    const onSubmit = (values: z.infer<typeof loginFormSchema>) => {
         toast({ description: "Signup successful!" });
         console.log("Form Data:", values);
         // Submit form values to your backend API

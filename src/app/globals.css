@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
-    background-color: rgb(255 252 244);
-    font-weight: 500;
+  font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
+  background-color: rgb(255 252 244);
+  font-weight: 500;
 }
 
 h1,
@@ -19,180 +19,189 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-playfair-display);
+  font-family: var(--font-playfair-display);
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
 }
 
 .custom-container {
-    max-width: 2560px; /*? or 1280px */
-    margin: 0 auto;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  max-width: 2560px; /*? or 1280px */
+  margin: 0 auto;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .hero-background {
-    background-color: rgba(255, 246, 237, 0.7);
-    background-image: url("/hero-bg.svg");
-    background-blend-mode: overlay;
-    background-repeat: repeat; /* Repeat horizontally */
-    background-size: 30%; /* Keep original size */
-    background-position: top; /* Align vertically */
-    box-shadow: 0px 4px 44px 0px rgba(138, 97, 30, 0.1) inset;
+  background-color: rgba(255, 246, 237, 0.7);
+  background-image: url("/hero-bg.svg");
+  background-blend-mode: overlay;
+  background-repeat: repeat; /* Repeat horizontally */
+  background-size: 30%; /* Keep original size */
+  background-position: top; /* Align vertically */
+  box-shadow: 0px 4px 44px 0px rgba(138, 97, 30, 0.1) inset;
 }
 
 .sub-hero-background {
-    background-image: linear-gradient(
-            180deg,
-            rgba(157, 157, 157, 0.1) 0%,
-            rgba(43, 35, 28, 0.2) 100%
-        ),
-        url("/images/hero3.webp");
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: overlay;
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: fixed;
+  background-image: linear-gradient(
+      180deg,
+      rgba(157, 157, 157, 0.1) 0%,
+      rgba(43, 35, 28, 0.2) 100%
+    ),
+    url("/images/hero3.webp");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .faq-section-background {
-    background-image: url("/images/faq-section.webp");
-    background-color: rgba(255, 252, 244, 0.5);
-    background-blend-mode: overlay;
-    background-position: top;
-    background-size: cover;
-    background-attachment: fixed;
+  background-image: url("/images/faq-section.webp");
+  background-color: rgba(255, 252, 244, 0.5);
+  background-blend-mode: overlay;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .image-radial-gradient {
-    background: radial-gradient(
-            35.6% 74.32% at 50.79% 50.01%,
-            rgba(255, 252, 244, 0) 0%,
-            #fffcf4 100%
-        ),
-        radial-gradient(
-            48.17% 48.35% at 45.62% 43.45%,
-            rgba(255, 252, 244, 0) 0%,
-            rgba(255, 252, 244, 0.85) 100%
-        );
+  background: radial-gradient(
+      35.6% 74.32% at 50.79% 50.01%,
+      rgba(255, 252, 244, 0) 0%,
+      #fffcf4 100%
+    ),
+    radial-gradient(
+      48.17% 48.35% at 45.62% 43.45%,
+      rgba(255, 252, 244, 0) 0%,
+      rgba(255, 252, 244, 0.85) 100%
+    );
 }
 
 .glass {
-    background-color: rgba(65, 46, 0, 0.15);
-    backdrop-filter: blur(3px);
-    border: 0.1px solid rgba(255, 255, 255, 0.25);
-    transition: all 0.3s ease;
+  background-color: rgba(65, 46, 0, 0.15);
+  backdrop-filter: blur(3px);
+  border: 0.1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
 
-    &:hover {
-        backdrop-filter: blur(5px);
-    }
+  &:hover {
+    backdrop-filter: blur(5px);
+  }
 }
 
 @layer base {
-    :root {
-        --background: 43.64 100% 97.84%;
-        --background-alt: 42 55.56% 96.47%;
-        --heading-foreground: 21.54 100% 7.65%;
-        --foreground: 0 0% 24.31%;
-        --card: 60 7% 97%;
-        --card-foreground: 20 14.3% 4.1%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 20 14.3% 4.1%;
-        --primary: 205.52 46.03% 37.06%;
-        --primary-foreground: 60 9.1% 97.8%;
-        --secondary: 20.74 89.3% 52.35%;
-        --secondary-foreground: 60 9.1% 97.8%;
-        --tertiary: 171.27 53.4% 20.2%; /* 203.41 30.37% 26.47%;*/
-        --tertiary-foreground: 60 9.1% 97.8%;
-        --quaternary: 38.51 91.78% 57.06%;
-        --quaternary-foreground: 60 9.1% 97.8%;
-        --alt: 45 17% 95%;
-        --alt-foreground: 0 0% 24%;
-        --alt-border: 40 3% 77%;
-        --question: 21 83% 35%;
-        --question-heading: 20.83 88.32% 26.86%;
-        --question-foreground: 0 0% 98%;
-        --muted: 60 4.8% 95.9%;
-        --muted-foreground: 25 5.3% 44.7%;
-        --accent: 60 4.8% 95.9%;
-        --accent-foreground: 24 9.8% 10%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 60 9.1% 97.8%;
-        --border: 45 6% 73%;
-        --input: 20 5.9% 90%;
-        --ring: 0 0% 77%;
-        --radius: 0.3rem;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-    }
+  :root {
+    --background: 43.64 100% 97.84%;
+    --background-alt: 42 55.56% 96.47%;
+    --heading-foreground: 21.54 100% 7.65%;
+    --foreground: 0 0% 24.31%;
+    --card: 60 7% 97%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 205.52 46.03% 37.06%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 20.74 89.3% 52.35%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --tertiary: 171.27 53.4% 20.2%; /* 203.41 30.37% 26.47%;*/
+    --tertiary-foreground: 60 9.1% 97.8%;
+    --quaternary: 38.51 91.78% 57.06%;
+    --quaternary-foreground: 60 9.1% 97.8%;
+    --alt: 45 17% 95%;
+    --alt-foreground: 0 0% 24%;
+    --alt-border: 40 3% 77%;
+    --question: 21 83% 35%;
+    --question-heading: 20.83 88.32% 26.86%;
+    --question-foreground: 0 0% 98%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 45 6% 73%;
+    --input: 20 5.9% 90%;
+    --question-input: 0 0% 93%;
+    --question-input-foreground: 24 9.8% 10%;
+    --question-input-description: 0 0% 55%;
+    --question-input-border: 0 0% 77%;
+    --ring: 0 0% 77%;
+    --radius: 0.3rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
 
-    .dark {
-        --background: 20 14.3% 4.1%;
-        --heading-foreground: 60 9.1% 97.8%;
-        --foreground: 60 9.1% 97.8%;
-        --card: 20 14.3% 4.1%;
-        --card-foreground: 60 9.1% 97.8%;
-        --popover: 20 14.3% 4.1%;
-        --popover-foreground: 60 9.1% 97.8%;
-        --primary: 203.41 30.37% 26.47%;
-        --primary-foreground: 60 9.1% 97.8%;
-        --secondary: 205.52 46.03% 37.06%;
-        --secondary-foreground: 60 9.1% 97.8%;
-        --tertiary: 38.51 91.78% 57.06%;
-        --tertiary-foreground: 60 9.1% 97.8%;
-        --quaternary: 20.74 89.3% 52.35%;
-        --quaternary-foreground: 60 9.1% 97.8%;
-        --muted: 12 6.5% 15.1%;
-        --muted-foreground: 24 5.4% 63.9%;
-        --accent: 12 6.5% 15.1%;
-        --accent-foreground: 60 9.1% 97.8%;
-        --destructive: 0 72.2% 50.6%;
-        --destructive-foreground: 60 9.1% 97.8%;
-        --border: 12 6.5% 15.1%;
-        --input: 12 6.5% 15.1%;
-        --ring: 20.5 90.2% 48.2%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --heading-foreground: 60 9.1% 97.8%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 203.41 30.37% 26.47%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 205.52 46.03% 37.06%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --tertiary: 38.51 91.78% 57.06%;
+    --tertiary-foreground: 60 9.1% 97.8%;
+    --quaternary: 20.74 89.3% 52.35%;
+    --quaternary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @layer base {
-    * {
-        @apply border-border;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 /* custom tailwind classes */
 @layer utilities {
-    .screen-max {
-        @apply max-w-full max-h-screen h-screen grid place-items-center;
-    }
-    .wh-max {
-        @apply max-w-full max-h-full h-full grid place-items-center px-10 py-10;
-    }
-    .wh-max-p {
-        @apply max-w-full max-h-full h-full grid place-items-center px-10 py-16;
-    }
-    .hp-combo {
-        @apply flex flex-col flex-wrap;
-    }
-    .hp-combo-h2 {
-        @apply flex flex-col flex-wrap gap-2;
-    }
-    .universal-roundness {
-        @apply rounded-lg;
-    }
-    .sticky-header {
-        @apply shadow-md bg-backgroundAlt;
-    }
-    .sticky-nav {
-        @apply py-5;
-    }
+  .screen-max {
+    @apply max-w-full max-h-screen h-screen grid place-items-center;
+  }
+  .wh-max {
+    @apply max-w-full max-h-full h-full grid place-items-center px-10 py-10;
+  }
+  .wh-max-p {
+    @apply max-w-full max-h-full h-full grid place-items-center px-10 py-16;
+  }
+  .hp-combo {
+    @apply flex flex-col flex-wrap;
+  }
+  .hp-combo-h2 {
+    @apply flex flex-col flex-wrap gap-2;
+  }
+  .universal-roundness {
+    @apply rounded-lg;
+  }
+  .sticky-header {
+    @apply shadow-lg bg-backgroundAlt;
+  }
+  .sticky-nav {
+    @apply py-5;
+  }
 }

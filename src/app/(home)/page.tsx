@@ -66,7 +66,7 @@ export default function Home() {
             {/* ========== Start About Section ========== */}
             <section className="wh-max-p">
                 <div className="container custom-container px-12 py-32 grid grid-cols-[6fr,7fr] gap-8 place-items-center">
-                    <div className="relative justify-self-end w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] overflow-hidden">
+                    <div className="relative w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] overflow-hidden">
                         {/* About Image */}
                         <Image
                             src={"/images/man-holding-child.webp"}
