@@ -48,7 +48,17 @@ export function TypographyH4({ children, className = "" }: Typography) {
 export function TypographyP({ children, className = "" }: Typography) {
     return (
         <p
-            className={`~sm/2xl:~text-xl/3xl font-normal leading-10 ${className}`}
+            className={`~sm/2xl:~text-lg/2xl font-normal leading-10 ${className}`}
+        >
+            {children}
+        </p>
+    );
+}
+
+export function TypographyPHero({ children, className = "" }: Typography) {
+    return (
+        <p
+            className={`~sm/2xl:~text-xl/4xl font-normal leading-10 ${className}`}
         >
             {children}
         </p>

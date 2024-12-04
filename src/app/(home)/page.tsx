@@ -7,6 +7,7 @@ import {
     TypographyH1,
     TypographyH2,
     TypographyP,
+    TypographyPHero,
 } from "@/components/ui/typography";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,12 +29,12 @@ export default function Home() {
                                     <TypographyH1 className="font-semibold drop-shadow-[0_0_6px_rgba(255,240,228,0.5)]">
                                         Virtual Space for Real Life Choices
                                     </TypographyH1>
-                                    <TypographyP>
+                                    <TypographyPHero>
                                         Empowering you to connect Islamic
                                         Worldview with the realities of modern
                                         life through practical and
                                         transformative experiences.
-                                    </TypographyP>
+                                    </TypographyPHero>
                                 </div>
 
                                 {/* Buttons */}
@@ -68,7 +69,7 @@ export default function Home() {
                     <div className="relative justify-self-end w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] xl:w-[450px] xl:h-[450px] overflow-hidden">
                         {/* About Image */}
                         <Image
-                            src={"/images/man-holding-child.jpeg"}
+                            src={"/images/man-holding-child.webp"}
                             fill
                             objectFit="cover"
                             alt="About image"
@@ -102,7 +103,7 @@ export default function Home() {
                     <div className="grid grid-cols-2 place-items-center py-10 gap-7">
                         <SimpleCard
                             title={"Opportunity"}
-                            imageSrc={"/images/lighthouse.png"}
+                            imageSrc={"/images/lighthouse.webp"}
                         >
                             Gain access to workshops and training programs that
                             blend Islamic wisdom with practical life skills.
@@ -112,7 +113,7 @@ export default function Home() {
                         </SimpleCard>
                         <SimpleCard
                             title={"Social Network"}
-                            imageSrc={"/images/sail-boat.png"}
+                            imageSrc={"/images/sail-boat.webp"}
                         >
                             Become part of a like-minded community where
                             learning doesn’t end in isolation. Discuss ideas,
@@ -121,7 +122,7 @@ export default function Home() {
                         </SimpleCard>
                         <SimpleCard
                             title={"Achievement"}
-                            imageSrc={"/images/fishes.png"}
+                            imageSrc={"/images/fishes.webp"}
                         >
                             Set and accomplish meaningful goals, from completing
                             specialized workshops to mastering core skills.
@@ -131,7 +132,7 @@ export default function Home() {
                         </SimpleCard>
                         <SimpleCard
                             title={"Personal Growth"}
-                            imageSrc={"/images/plant.png"}
+                            imageSrc={"/images/plant.webp"}
                         >
                             OSCC is more than a learning platform—it’s a space
                             for introspection, character building, and
