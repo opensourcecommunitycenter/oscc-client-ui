@@ -45,6 +45,7 @@ export default {
         },
         quaternary: {
           DEFAULT: "hsl(var(--quaternary))",
+          alt: "hsl(var(--quaternary-alt))",
           foreground: "hsl(var(--quaternary-foreground))",
         },
         muted: {
