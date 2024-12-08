@@ -26,7 +26,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className="header sticky top-0 z-50 bg-background transition-all duration-300 ease-in-out">
+    <header className="header sticky top-0 z-[99999] bg-background transition-all duration-300 ease-in-out">
       <nav className="navbar flex items-center justify-between container custom-container py-7 transition-all duration-300 ease-in-out">
         <Link href={"/"}>
           <div className="w-56">
