@@ -9,7 +9,7 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
-import { questionFormSchema } from "@/validations/onboardingValidationSchema";
+import personalProfileValidationSchema from "@/validations/personalProfileValidationSchema";
 import { z } from "zod";
 import { Control } from "react-hook-form";
 import { PhoneInput } from "./input-phone";
@@ -17,10 +17,11 @@ import { Textarea } from "../ui/textarea";
 import Combobox from "../ui/combobox";
 import InputTriple from "./input-triple";
 import InputFile from "./input-file";
+import { RadioGroup } from "../ui/radio-group";
 
-type QuestionFormValues = z.infer<typeof questionFormSchema>;
+type QuestionFormValues = z.infer<typeof personalProfileValidationSchema>;
 
-interface QuestionFieldProps {
+interface PersonalProfileFieldProps {
   children: ReactNode;
   className?: string;
   formControl: Control<QuestionFormValues>;
@@ -30,7 +31,7 @@ interface QuestionFieldProps {
   placeholder?: string;
 }
 
-const QuestionField: React.FC<QuestionFieldProps> = ({
+const PersonalProfileField: React.FC<PersonalProfileFieldProps> = ({
   children,
   className = "",
   formControl,
@@ -38,7 +39,7 @@ const QuestionField: React.FC<QuestionFieldProps> = ({
   variant = "default",
   label,
   placeholder = "",
-}: QuestionFieldProps) => {
+}: PersonalProfileFieldProps) => {
   if (variant === "textarea") {
   }
 
@@ -76,6 +77,8 @@ const QuestionField: React.FC<QuestionFieldProps> = ({
                   <PhoneInput />
                 ) : variant === "file" ? (
                   <InputFile />
+                ) : variant === "radio" ? (
+                  <RadioGroup />
                 ) : !variant || variant === "default" ? (
                   <Input
                     placeholder={placeholder}
@@ -100,4 +103,4 @@ const QuestionField: React.FC<QuestionFieldProps> = ({
   );
 };
 
-export default QuestionField;
+export default PersonalProfileField;

@@ -8,7 +8,7 @@ interface Typography {
 export function TypographyH1({ children, className = "" }: Typography) {
   return (
     <h1
-      className={`scroll-m-20 font-extrabold text-base ~sm/2xl:~text-4xl/7xl ~2xl/ultra:~text-7xl/8xl tracking-wide ${className}`}
+      className={`scroll-m-20 font-extrabold text-5xl xl:text-6xl 2xl:~text-6xl/8xl tracking-wide ${className}`}
     >
       {children}
     </h1>

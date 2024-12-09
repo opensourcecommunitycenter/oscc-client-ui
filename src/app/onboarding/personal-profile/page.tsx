@@ -10,21 +10,32 @@ import { Button } from "@/components/ui/button";
 import Stepper from "@/components/custom/stepper";
 import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
-import { questionFormSchema } from "@/validations/onboardingValidationSchema";
-import QuestionField from "@/components/custom/question-field";
+import personalProfileValidationSchema from "@/validations/personalProfileValidationSchema";
+import PersonalProfileField from "@/components/custom/personal-profile-field";
 
 const Onboarding = () => {
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof questionFormSchema>>({
-    resolver: zodResolver(questionFormSchema),
+  const form = useForm<z.infer<typeof personalProfileValidationSchema>>({
+    resolver: zodResolver(personalProfileValidationSchema),
     defaultValues: {
       fullName: "",
+      groupName: "",
+      contactNumber: { countryCode: "", number: "" },
+      location: { country: "", state: "", city: "" },
+      EduBackground: "",
+      visionTitle: "",
+      dedicationTime: "",
+      ska: { skills: "", knowledge: "", attributes: "" },
+      rizq: "",
+      works: "",
     },
   });
 
   const formControl = form.control;
 
-  const onSubmit = (values: z.infer<typeof questionFormSchema>) => {
+  const onSubmit = (
+    values: z.infer<typeof personalProfileValidationSchema>,
+  ) => {
     toast({ description: "Submit Successful" });
     console.log("Form Data:", values);
     // Submit form values to your backend API
@@ -56,17 +67,17 @@ const Onboarding = () => {
               <Card className="grid grid-cols-1 place-items-center gap-5 bg-[#FFFFFFA6] min-w-full w-[75rem] px-0 py-8">
                 <CardContent className="w-full grid grid-cols-1 px-14 py-2 gap-10">
                   {/* Full Legal Name */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="fullName"
                     label="Your Full Legal Name"
                     placeholder="Ahmad Iqbal"
                   >
                     Your full legal name in official document(s)
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Group Name */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="groupName"
                     label="IMS Group Name"
@@ -74,10 +85,10 @@ const Onboarding = () => {
                   >
                     Enter the number/name of the IMS group you are part of (if
                     applicable). Example: IMS India G8
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Contact Number */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="contactNumber"
                     variant="phone"
@@ -86,20 +97,20 @@ const Onboarding = () => {
                   >
                     Provide your primary contact number with country code as
                     prefix, for important updates.
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Location */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="location"
                     variant="location"
                     label="Location"
                   >
                     Your city and country of residence.
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Edu Background */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="EduBackground"
                     variant="textarea"
@@ -108,20 +119,20 @@ const Onboarding = () => {
                   >
                     Example: 1. Student, Economics & Political Science; 2.
                     B.Tech, Civil Engineering.
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* CV Upload */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="uploadCV"
                     variant="file"
                     label="Upload CV"
                   >
                     Upload a professional or basic CV (Max 100 MB).
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Vision title */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="visionTitle"
                     label="What is your vision title?"
@@ -129,10 +140,10 @@ const Onboarding = () => {
                   >
                     Summarize your vision in one line (Example: Building a
                     knowledge-based community).
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Vision Statement Upload */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="visionStatement"
                     variant="file"
@@ -140,20 +151,20 @@ const Onboarding = () => {
                   >
                     Upload a document outlining your vision using the SMART
                     technique (Max 100 MB).
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Time Dedication */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="dedicationTime"
                     label="How much time can you dedicate?"
                     placeholder="10"
                   >
                     Specify in hours per week (e.g., 10 hours/week).
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* SKA */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="ska"
                     variant="trinput"
@@ -161,10 +172,10 @@ const Onboarding = () => {
                   >
                     Highlight your top skills, areas of knowledge, and any
                     unique attributes you bring to the platform.
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Rizq */}
-                  <QuestionField
+                  <PersonalProfileField
                     formControl={formControl}
                     fieldName="rizq"
                     variant="textarea"
@@ -172,10 +183,10 @@ const Onboarding = () => {
                     placeholder="Your Rizq"
                   >
                     Share how you aim to benefit or contribute to the Ummah.
-                  </QuestionField>
+                  </PersonalProfileField>
 
                   {/* Your Works */}
-                  <QuestionField
+                  <PersonalProfileField
                     className="border-b-transparent"
                     formControl={formControl}
                     fieldName="works"
@@ -185,7 +196,7 @@ const Onboarding = () => {
                   >
                     You can submit research papers, thesis, presentations,
                     blogs, or videos related to your expertise (Max 100 MB).
-                  </QuestionField>
+                  </PersonalProfileField>
                 </CardContent>
               </Card>
 

@@ -1,7 +1,8 @@
 import { z } from "zod";
 import { isValidPhoneNumber } from "react-phone-number-input";
 
-export const questionFormSchema = z.object({
+// Validation schema
+const personalProfileValidationSchema = z.object({
   fullName: z
     .string()
     .trim()
@@ -118,3 +119,10 @@ export const questionFormSchema = z.object({
   //   )
   //   .optional(),
 });
+
+// Infer TypeScript type
+export type LearningProfileValues = z.infer<
+  typeof personalProfileValidationSchema
+>;
+
+export default personalProfileValidationSchema;

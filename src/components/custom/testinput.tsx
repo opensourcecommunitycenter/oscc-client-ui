@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { questionFormSchema } from "@/validations/onboardingValidationSchema";
+import { questionFormSchema } from "@/validations/personalProfileValidationSchema";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
